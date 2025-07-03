@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 # Package Metadata
 PACKAGE_NAME = "indstocks"
-VERSION = "0.1.1"
+VERSION = "1.1.1"
 DESCRIPTION = "Access to Indian Stock Market insights via Python package."
 AUTHOR = "Aditya Reddy & Kshitij Mahale"
 AUTHOR_EMAIL = "adityareddy.biz@gmail.com, kshitijmahale02@gmail.com"

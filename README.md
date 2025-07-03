@@ -90,9 +90,9 @@ python setup.py install
 ## Quick Start
 
 ```python
-import indstocks as jf
+import indstocks as stocks
 
-quote = jf.Quote("ITC")
+quote = stocks.Quote("SBIN")
 
 print("Current Price:", quote.get_current_price())
 print("Company Info:", quote.get_stock_info())
@@ -152,34 +152,32 @@ Each method returns data as a Python object (dict, list, or value). Most methods
 ### `get_stock_info()`
 ```json
 {
-  "name": "HDFC Bank Ltd",
-  "about": "HDFC Bank Limited (also known as HDFC) is an Indian banking and financial services company headquartered in Mumbai...",
-  "link": "http://www.hdfcbank.com",
-  "bse_link": "https://www.bseindia.com/stock-share-price/hdfc-bank-ltd/HDFCBANK/500180/",
-  "nse_link": "https://www.nseindia.com/get-quotes/equity?symbol=HDFCBANK",
-  "sector": "Financial Services",
-  "industry": "Private Sector Bank"
+  "name": "State Bank of India",
+  "about": "State Bank of India is a Fortune 500 company. It is an Indian Multinational, Public Sector banking and financial services statutory body headquartered in Mumbai. It is the largest and oldest bank in India with over 200 years of history.[1]",
+  "link": "http://www.sbi.co.in",
+  "bse_link": "https://www.bseindia.com/stock-share-price/state-bank-of-india/SBIN/500112/",
+  "nse_link": "https://www.nseindia.com/get-quotes/equity?symbol=SBIN",
+  "sector": "Public Sector Bank",
+  "industry": "Financial Services"
 }
 ```
 
 ### `get_current_price()`
 ```json
-2014.90
+811.40
 ```
 
 ### `get_pros_and_cons()`
 ```json
 {
   "pros": [
-    "Company has delivered good profit growth of 21.0% CAGR over last 5 years",
-    "Company has been maintaining a healthy dividend payout of 23.3%",
-    "Company's median sales growth is 16.4% of last 10 years"
+    "Company has delivered good profit growth of 36.3% CAGR over last 5 years",
+    "Company has been maintaining a healthy dividend payout of 18.2%"
   ],
   "cons": [
-    "Stock is trading at 2.98 times its book value",
     "Company has low interest coverage ratio.",
-    "Contingent liabilities of Rs.24,09,821 Cr.",
-    "Earnings include an other income of Rs.1,34,548 Cr."
+    "Contingent liabilities of Rs.27,42,584 Cr.",
+    "Earnings include an other income of Rs.1,72,406 Cr."
   ]
 }
 ```
@@ -187,14 +185,14 @@ Each method returns data as a Python object (dict, list, or value). Most methods
 ### `get_basic_info()`
 ```json
 {
-  "Market Cap": "15,45,008",
-  "Current Price": "2,015",
-  "High / Low": "2,027",
-  "Stock P/E": "21.8",
-  "Book Value": "677",
-  "Dividend Yield": "1.09",
-  "ROCE": "7.51",
-  "ROE": "14.5",
+  "Market Cap": "7,23,787",
+  "Current Price": "811",
+  "High / Low": "899",
+  "Stock P/E": "9.30",
+  "Book Value": "546",
+  "Dividend Yield": "1.96",
+  "ROCE": "6.47",
+  "ROE": "17.2",
   "Face Value": "1.00"
 }
 ```
@@ -203,12 +201,18 @@ Each method returns data as a Python object (dict, list, or value). Most methods
 ```json
 {
   "buy": [
-    { "qty": "195", "price": "2011.50" },
-    { "qty": "5", "price": "2011.45" }
+    { "qty": "210", "price": "811.10" },
+    { "qty": "477", "price": "811.05" },
+    { "qty": "197", "price": "811.00" },
+    { "qty": "28", "price": "810.90" },
+    { "qty": "462", "price": "810.85" }
   ],
   "sell": [
-    { "qty": "10", "price": "2012.65" },
-    { "qty": "45", "price": "2012.95" }
+    { "qty": "114", "price": "811.50" },
+    { "qty": "185", "price": "811.55" },
+    { "qty": "321", "price": "811.60" },
+    { "qty": "356", "price": "811.65" },
+    { "qty": "445", "price": "811.70" }
   ]
 }
 ```
@@ -217,11 +221,11 @@ Each method returns data as a Python object (dict, list, or value). Most methods
 ```json
 [
   {
-    "name": "Geojit Financial Services",
-    "date": "06 May, 2025",
-    "reco_price": 1930.55,
-    "target_price": 2192.0,
-    "link": "https://images.moneycontrol.com/static-mcnews/2025/05/20250514084746_HDFC-Bank-14052025-geo.pdf"
+    "name": "Motilal Oswal",
+    "date": "04 May, 2025",
+    "reco_price": 800.05,
+    "target_price": 915.0,
+    "link": "https://images.moneycontrol.com/static-mcnews/2025/05/20250505091411_State-Bank-of-India-05052025-moti.pdf"
   }
 ]
 ```
@@ -231,9 +235,9 @@ Each method returns data as a Python object (dict, list, or value). Most methods
 ## Data Sources
 
 INDStocks aggregates and harmonizes data from multiple trusted sources:
-- **MoneyControl**: Financial statements, news, broker research, market depth
 - **Screener**: Company fundamentals, ratios, annual reports
 - **Investing.com**: Real-time and historical prices
+- **MoneyControl**: Financial statements, news, broker research, market depth
 
 ---
 
