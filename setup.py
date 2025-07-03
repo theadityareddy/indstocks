@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 # Package Metadata
 PACKAGE_NAME = "indstocks"
-VERSION = "1.0.0"
-DESCRIPTION = "Comprehensive access to Indian stock market insights via Python."
+VERSION = "0.1.1"
+DESCRIPTION = "Access to Indian Stock Market insights via Python package."
 AUTHOR = "Aditya Reddy & Kshitij Mahale"
 AUTHOR_EMAIL = "adityareddy.biz@gmail.com, kshitijmahale02@gmail.com"
 GITHUB_URL = "https://github.com/theadityareddy/indstocks"
@@ -34,7 +34,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     package_data={
-        'indstocks': ['scrapers/links.json'],  # Make sure this path is correct
+        'indstocks.scrapers': ['links.json'],
     },
     install_requires=[
         "beautifulsoup4",
@@ -42,15 +42,17 @@ setup(
         "requests",
         "selenium"
     ],
-    python_requires='>=3.7',
-    keywords=["python", "finance", "stock market", "india", "data scraper"],
+    extras_require={
+        "dev" : ["pytest>7.0", "twine>4.0.2"]
+    },
+    python_requires='>=3.10',
+    keywords=["python", "india", "nse", "bse", "stock market", "indian", "data scraper"],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "Intended Audience :: Financial and Insurance Industry",
-        "Topic :: Software Development :: Libraries",
-        "Topic :: Office/Business :: Financial :: Investment",
         "License :: OSI Approved :: MIT License",
+        "Topic :: Office/Business :: Financial",
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
     ],

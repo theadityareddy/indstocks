@@ -1,4 +1,5 @@
 import json
+import importlib.resources
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -8,7 +9,7 @@ import time
 class Investing:
     def __init__(self, ticker):
         self.ticker = ticker
-        with open("indstocks/scrapers/links.json", "r") as file:
+        with importlib.resources.open_text("indstocks.scrapers", "links.json") as file:
             link_dict = json.load(file)
         base_URL = link_dict[self.ticker]["investing_link"]
         self.URL = base_URL + "-historical-data"

@@ -1,3 +1,4 @@
+import importlib.resources
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -10,7 +11,7 @@ class MoneyControl:
         self.ticker = ticker
 
     def get_soup(self):
-        with open("indstocks/scrapers/links.json", "r") as file:
+        with importlib.resources.open_text("indstocks.scrapers", "links.json") as file:
             link_dict = json.load(file)
         self.mc_URL = link_dict[self.ticker]["moneycontrol_link"]
         api_response = requests.get(self.mc_URL).text

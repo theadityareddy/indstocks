@@ -1,5 +1,18 @@
 # INDStocks: Python Library for Indian Stock Market Data & Analysis
 
+[![PyPI - Version](https://img.shields.io/pypi/v/indstocks)](https://pypi.org/project/indstocks/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Downloads](https://static.pepy.tech/badge/indstocks)](https://pepy.tech/project/indstocks)
+[![Monthly Downloads](https://static.pepy.tech/badge/indstocks/month)](https://pepy.tech/project/indstocks)
+
+---
+
+## 📦 Installation
+
+```bash
+pip install indstocks
+```
+
 A comprehensive, developer-friendly Python package for real-time and historical Indian stock market data, company fundamentals, financial statements, analyst research, and more. INDStocks aggregates data from top sources making it the go-to toolkit for investors, analysts, and developers working with Indian equities.
 
 ---

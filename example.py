@@ -1,11 +1,11 @@
-import indstocks as jf
+import indstocks as stocks
 
-print('enter ticker name')
+# Select the ticker
+tickers = ['SBIN', 'LT', 'TCS', 'ZOMATO', 'MRF']
+quote = stocks.Quote(tickers[0])
 
-tickers = ["INFY", "RELIANCE", "HDFCBANK", "HDFC"]
-quote = jf.Quote(tickers[0])
 
-# print(quote.get_stock_info())
+print(quote.get_stock_info())
 '''
 {
   "name": "HDFC Bank Ltd",
