@@ -4,6 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Downloads](https://static.pepy.tech/badge/indstocks)](https://pepy.tech/project/indstocks)
 [![Monthly Downloads](https://static.pepy.tech/badge/indstocks/month)](https://pepy.tech/project/indstocks)
+[![Weekly Downloads](https://static.pepy.tech/badge/indstocks/week)](https://pepy.tech/projects/indstocks)
 
 ---
 
