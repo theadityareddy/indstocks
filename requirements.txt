@@ -28,3 +28,4 @@ trio-websocket==0.10.2
 tzdata==2023.3
 urllib3==1.26.15
 wsproto==1.2.0
+certifi==2025.8.3
