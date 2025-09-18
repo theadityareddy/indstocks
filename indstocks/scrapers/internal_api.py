@@ -81,9 +81,7 @@ class InternalAPI:
     def historical_data(self):
         html = self._get_home_html_code()
         target_url = self._get_short_target_url()
-        with open("test.html","a") as file:
-            file.write(f"Target url {target_url}")
-            file.write(html)
+        
 
         pair_id = self._get_pair_by_url(
             html = html,
