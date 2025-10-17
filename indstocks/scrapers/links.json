@@ -839,6 +839,10 @@
     "moneycontrol_link": "https://www.moneycontrol.com/india/stockpricequote/finance-housing/housingdevelopmentfinancecorporation/HDF",
     "investing_link": "https://in.investing.com/equities/housing-development-finance"
   },
+  "HYUNDAI":{
+    "moneycontrol_link": "https://www.moneycontrol.com/india/stockpricequote/automobile-passenger-cars/hyundaimotorindia/HMI01",
+    "investing_link": "https://in.investing.com/equities/hyundai-motor-india"
+  },
   "ICICIBANK": {
     "moneycontrol_link": "https://www.moneycontrol.com/india/stockpricequote/banks-private-sector/icicibank/ICI02",
     "investing_link": "https://in.investing.com/equities/icici-bank-ltd"
