@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 import time
 
 
+
 class Investing:
     def __init__(self, ticker):
         self.ticker = ticker

@@ -1,10 +1,10 @@
 # Get the quote details
 # - current price, company info, etc.
 
-from indstocks.scrapers import Investing, MoneyControl, Screener
-
+from indstocks.scrapers import Investing, MoneyControl, Screener,InternalAPI
+import json
 import datetime as dt
-
+from typing import Dict
 
 class Quote:
     def __init__(self, ticker):
@@ -14,21 +14,23 @@ class Quote:
         self.mc = MoneyControl(ticker=ticker)
         self.mc.get_soup()
         self.investing = Investing(ticker=ticker)
+        self.internalAPI = InternalAPI(ticker=ticker)
 
-    def get_all_stock_data(self):
+    def get_all_stock_data(self,indent:int=None)->Dict:
         """
         Retrieves all stock data for a given stock.
 
         :param self: The instance of the class.
+        :pram indent: Indentation of dict/json , default None
         :return: A dictionary containing various stock data such as current price, basic info, description,
                  historical data, price change, market depth, broker research, pros and cons, financials,
                  annual reports, and top news.
         """
-        all_data = {
+        data = {
             "current_price": self.get_current_price(),
             "basic_info": self.get_basic_info(),
             "description": self.get_stock_info(),
-            # "historical_data": self.get_historical_data(),
+            #"historical_data": self.get_historical_data(),
             "price_change": self.get_stock_price_change(),
             "market_depth": self.get_market_depth(),
             "broker_research": self.get_broker_research(),
@@ -37,7 +39,7 @@ class Quote:
             "annual_reports": self.get_annual_reports(),
             "top_news": self.get_top_news(),
         }
-
+        all_data = json.dumps(data,indent=indent)
         return all_data
 
     def get_current_price(self):
@@ -69,7 +71,7 @@ class Quote:
             The historical price data for the stock.
         """
         # print("Getting stock historical data")
-        return self.investing.historical_price()
+        return self.internalAPI.historical_data()
 
     def get_stock_price_change(self):
         """
